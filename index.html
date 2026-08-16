@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhavani Electricals & Mitali Enterprises</title>
     <style>
-        /* Premium Corporate Color Theme (Inspired by Teva Layout) */
+        /* Minimalist Corporate Framework (Lupin Benchmark Design) */
         * {
             margin: 0;
             padding: 0;
@@ -19,27 +19,28 @@
             line-height: 1.6;
         }
 
-        /* Top Hero Banner in Deep Corporate Green */
+        /* Pure Dark Green Corporate Hero Banner Layer */
         .hero-banner {
-            background: linear-gradient(135deg, #09472a 0%, #0d5c36 100%);
+            background: linear-gradient(135deg, #063923 0%, #0a4f31 100%);
             color: #ffffff;
-            padding: 2rem 5% 5rem 5%;
+            padding: 2rem 6% 6rem 6%;
             position: relative;
         }
 
-        /* Minimal Header Layout within the Banner */
+        /* Top Horizontal Clean Mainframe Header alignment */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 4rem;
+            padding-bottom: 5rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .logo-area h2 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: bold;
             letter-spacing: 0.5px;
+            text-transform: uppercase;
         }
 
         nav a {
@@ -47,8 +48,7 @@
             text-decoration: none;
             margin-left: 2rem;
             font-size: 0.95rem;
-            font-weight: normal;
-            opacity: 0.9;
+            opacity: 0.85;
             transition: opacity 0.2s ease;
         }
 
@@ -56,32 +56,33 @@
             opacity: 1;
         }
 
-        /* Banner Text Section */
+        /* Inner Left Column Banner Content Block */
         .banner-content {
-            max-width: 600px;
-            margin-top: 3.5rem;
+            max-width: 620px;
+            margin-top: 4.5rem;
         }
 
         .banner-content h1 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             font-weight: bold;
-            line-height: 1.2;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
         }
 
         .banner-content p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             opacity: 0.85;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
 
-        /* Clean "Know More" Style Call-to-Action Button */
+        /* Flat Clean "Know More" Action Button with micro-transition */
         .know-more-btn {
             display: inline-block;
-            background-color: #128c54;
+            background-color: #117a4a;
             color: #ffffff;
             text-decoration: none;
-            padding: 0.8rem 2rem;
+            padding: 0.85rem 2.2rem;
             font-weight: bold;
             border-radius: 4px;
             font-size: 0.95rem;
@@ -89,70 +90,97 @@
         }
 
         .know-more-btn:hover {
-            background-color: #16a362;
+            background-color: #15945b;
         }
 
-        /* Pure White Corporate Main Content Area */
+        /* White Corporate Main Layout Body */
         main {
             max-width: 1100px;
-            margin: 4rem auto;
-            padding: 0 5%;
+            margin: 5rem auto;
+            padding: 0 6%;
         }
 
-        /* Content Blocks */
         .corporate-section {
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
         }
 
         .corporate-section h2 {
-            color: #09472a;
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            color: #063923;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
             font-weight: bold;
         }
 
-        .corporate-section p {
-            color: #555555;
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
+        /* Professional System Grid Structure */
+        .system-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        /* Clean Service Lists */
-        .service-list {
-            list-style-type: none;
+        .system-card {
+            background-color: #f9fbf9;
+            border: 1px solid #e2e8e4;
+            padding: 2rem;
+            border-radius: 4px;
+        }
+
+        .system-card h3 {
+            color: #063923;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-weight: bold;
+        }
+
+        .system-card p {
+            color: #555555;
+            font-size: 1rem;
+        }
+
+        /* Benefits Row Structure */
+        .benefits-row {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .service-list li {
-            background-color: #f8faf9;
-            padding: 1.5rem;
-            border-left: 4px solid #128c54;
-            border-radius: 0 4px 4px 0;
-            font-size: 1.05rem;
-            color: #333333;
+        .benefit-item {
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #e8ede9;
         }
 
-        /* Symmetric Portfolio Image Layout Grid */
+        .benefit-item h3 {
+            color: #117a4a;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .benefit-item p {
+            color: #555555;
+            font-size: 1rem;
+        }
+
+        /* Geometric Portfolio Image Section Grid */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
         .portfolio-item {
             border-radius: 4px;
             overflow: hidden;
-            background-color: #f8faf9;
-            border: 1px solid #e0e0e0;
+            background-color: #f9fbf9;
+            border: 1px solid #e2e8e4;
         }
 
         .portfolio-item img {
             width: 100%;
-            height: 220px;
+            height: 240px;
             object-fit: cover;
             display: block;
         }
@@ -161,15 +189,16 @@
             padding: 1rem;
             font-size: 0.95rem;
             font-weight: bold;
-            color: #09472a;
+            color: #063923;
             text-align: center;
+            border-top: 1px solid #e2e8e4;
         }
 
-        /* Minimal Inverted Contact Area */
+        /* Minimal Inverted Contact Panel Block */
         .contact-box {
-            background-color: #f8faf9;
-            border: 1px solid #e0e0e0;
-            padding: 2.5rem;
+            background-color: #f9fbf9;
+            border: 1px solid #e2e8e4;
+            padding: 3rem 2rem;
             border-radius: 4px;
             text-align: center;
         }
@@ -178,124 +207,117 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 2.5rem;
+            margin-top: 2.5rem;
         }
 
         .contact-link-item {
-            color: #09472a;
+            color: #063923;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
         }
 
         .contact-link-item:hover {
             text-decoration: underline;
         }
 
-        /* Clean Corporate Footer */
+        /* Structural Corporate Footer block matching copyright rules */
         footer {
-            border-top: 1px solid #e0e0e0;
+            border-top: 1px solid #e2e8e4;
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 3.5rem 1rem;
             color: #777777;
             font-size: 0.9rem;
-            background-color: #fdfdfd;
+            background-color: #fafafa;
         }
 
-        /* Mobile View Rules */
+        /* Mobile Viewports Rules Configuration */
         @media (max-width: 768px) {
-            header { flex-direction: column; gap: 1rem; text-align: center; padding-bottom: 2rem; }
+            header { flex-direction: column; gap: 1.5rem; text-align: center; padding-bottom: 2.5rem; }
             nav a { margin: 0 0.8rem; }
-            .banner-content h1 { font-size: 2.2rem; }
-            .banner-content { text-align: center; }
+            .banner-content h1 { font-size: 2.3rem; }
+            .banner-content { text-align: center; margin: 3rem auto 0 auto; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Corporate Header & Banner Block -->
+    <!-- Header Frame Content Area -->
     <div class="hero-banner">
         <header>
             <div class="logo-area">
-                <h2>BHAVANI ELECTRICALS</h2>
+                <h2>Bhavani Electricals</h2>
             </div>
             <nav>
-                <a href="#about">About Us</a>
-                <a href="#residential">Residential</a>
-                <a href="#industrial">Industrial</a>
+                <a href="#system">Solar Infrastructure</a>
+                <a href="#benefits">Main Benefits</a>
+                <a href="#portfolio">Our Portfolio</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
 
         <div class="banner-content">
             <h1>Advancing Clean Energy for All</h1>
-            <p>Bhavani Electricals & Mitali Enterprises designs and installs premium, sustainable solar architectures for homes and industries throughout Nashik.</p>
-            <a href="https://wa.me" class="know-more-btn" target="_blank">Connect Now</a>
+            <p>Bhavani Electricals & Mitali Enterprises designs and installs premium, sustainable solar architectures for residential properties and heavy industries throughout Nashik.</p>
+            <a href="https://wa.me" class="know-more-btn" target="_blank">Know More</a>
         </div>
     </div>
 
-    <!-- Main Content Area -->
     <main>
         
-        <!-- About Block -->
-        <section id="about" class="corporate-section">
-            <h2>Our Business Journey</h2>
-            <p>We are dedicated to building a better tomorrow through structural durability, optimized power generation efficiency, and simplified processing for government solar subsidies. Our team handles every element of your power distribution setup with engineering accuracy.</p>
-        </section>
-
-        <!-- 1) Residential Section -->
-        <section id="residential" class="corporate-section">
-            <h2>1. Residential Solar Systems</h2>
-            <p>Eliminate your monthly household electricity bills entirely. We provide robust, long-term rooftop solar plants customized to suit your available roof layout footprint.</p>
-            <ul class="service-list">
-                <li>On-Grid Home Solar Plant Integration</li>
-                <li>Net Metering Synchronization via MSEDCL</li>
-                <li>Government Subsidy Verification & Clearances</li>
-                <li>Premium High-Efficiency Panel Implementations</li>
-            </ul>
-
-            <h3 style="margin-top: 2rem; color: #09472a;">Completed Residential Portfolio</h3>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="project1.jpg" alt="Rooftop Project 1">
-                    <div class="portfolio-label">Installation Site 1</div>
+        <!-- Technical System Components Block -->
+        <section id="system" class="corporate-section">
+            <h2>Solar Architecture Profile</h2>
+            <div class="system-grid">
+                <div class="system-card">
+                    <h3>Solar Panels</h3>
+                    <p>Made of silicon cells to catch sunlight. Monocrystalline types give higher power output.</p>
                 </div>
-                <div class="portfolio-item">
-                    <img src="project2.jpg" alt="Rooftop Project 2">
-                    <div class="portfolio-label">Installation Site 2</div>
+                <div class="system-card">
+                    <h3>Inverter</h3>
+                    <p>Changes direct current (DC) power from panels into alternating current (AC) for home use.</p>
                 </div>
-                <div class="portfolio-item">
-                    <img src="project3.jpg" alt="Rooftop Project 3">
-                    <div class="portfolio-label">Installation Site 3</div>
+                <div class="system-card">
+                    <h3>Mounting Racks</h3>
+                    <p>Holds the panels at the right structural angle on your roof layout.</p>
                 </div>
-                <div class="portfolio-item">
-                    <img src="project4.jpg" alt="Rooftop Project 4">
-                    <div class="portfolio-label">Installation Site 4</div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="project5.jpg" alt="Rooftop Project 5">
-                    <div class="portfolio-label">Installation Site 5</div>
+                <div class="system-card">
+                    <h3>Net Meter</h3>
+                    <p>Tracks power sent to and taken from the utility grid system.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 2) Industrial Section -->
-        <section id="industrial" class="corporate-section">
-            <h2>2. Industrial & Commercial Solutions</h2>
-            <p>Reduce commercial operational costs using robust energy management solutions. We deploy heavy-duty plant engineering setups matching strict factory criteria codes.</p>
-            <ul class="service-list">
-                <li>Large-Scale Commercial Rooftop Power Grids</li>
-                <li>Turnkey Factory Wiring & Electrical Infrastructure</li>
-                <li>HT/LT Panel Engineering & Transformer Deployments</li>
-                <li>Power Factor Optimization Systems</li>
-            </ul>
+        <!-- Main Benefits Block -->
+        <section id="benefits" class="corporate-section">
+            <h2>Main Benefits</h2>
+            <div class="benefits-row">
+                <div class="benefit-item">
+                    <h3>Lower Bills</h3>
+                    <p>Generates free energy from the sun to offset daily utility operational costs.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Eco-Friendly</h3>
+                    <p>Produces clean, green energy without generating harmful air pollution metrics.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Roof Protection</h3>
+                    <p>Shades your physical roof structure from direct sun, which can help keep your top floor spaces cooler.</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="corporate-section">
-            <div class="contact-box">
-                <h2>Contact Our Office</h2>
-                <p>Reach out directly to schedule a clean technical site assessment or consultation with our project heads.</p>
-                <div class="contact-links">
-                    <a href="tel:+919075160204" class="contact-link-item">📞 Phone: 9075160204</a>
+        <!-- Completed Work Image Gallery Block -->
+        <section id="portfolio" class="corporate-section">
+            <h2>Our Completed Rooftop Projects</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Rooftop Setup View 1">
+                    <div class="portfolio-label">Project View 1</div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Rooftop Setup View 2">
+                    <div class="portfolio-label">Project View 2</div>
+                </div>
+                <div class="portfolio-item">
