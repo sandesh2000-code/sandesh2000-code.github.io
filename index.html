@@ -1,0 +1,126 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..5007851ee8b42ca1626b9a3c8c601efd3b08ed74
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,116 @@
++<!doctype html>
++<html lang="en">
++<head>
++  <meta charset="utf-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1">
++  <meta name="description" content="Bhavani Electricals & Mitali Enterprises provides residential, commercial, and industrial solar installation services in Nashik and surrounding areas.">
++  <title>Bhavani Electricals & Mitali Enterprises | Solar Installation in Nashik</title>
++  <link rel="preconnect" href="https://fonts.googleapis.com">
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
++  <link rel="stylesheet" href="styles.css">
++</head>
++<body>
++  <header class="hero" id="home">
++    <nav class="nav" aria-label="Main navigation">
++      <a class="brand" href="#home" aria-label="Bhavani Electricals home">
++        <span class="brand-mark">☀</span>
++        <span>Bhavani Electricals</span>
++      </a>
++      <div class="nav-links">
++        <a href="#services">Services</a>
++        <a href="#process">Process</a>
++        <a href="#contact">Contact</a>
++      </div>
++    </nav>
++
++    <section class="hero-grid">
++      <div class="hero-copy">
++        <p class="eyebrow">Clean Energy • Better Tomorrow</p>
++        <h1>All types of solar works in Nashik</h1>
++        <p class="hero-text">Bhavani Electricals & Mitali Enterprises designs and installs reliable solar systems for homes, businesses, and industries across Nashik and nearby areas.</p>
++        <div class="hero-actions">
++          <a class="button primary" href="tel:+919075160204">Call Darshan: 9075160204</a>
++          <a class="button secondary" href="#contact">Request a free quote</a>
++        </div>
++      </div>
++      <div class="hero-card" aria-label="Solar panels at sunset illustration">
++        <div class="sun"></div>
++        <div class="panel-array">
++          <span></span><span></span><span></span><span></span>
++          <span></span><span></span><span></span><span></span>
++          <span></span><span></span><span></span><span></span>
++        </div>
++      </div>
++    </section>
++  </header>
++
++  <main>
++    <section class="trust-strip" aria-label="Business highlights">
++      <div><strong>High Quality</strong><span>Solar Solutions</span></div>
++      <div><strong>Professional</strong><span>Installation</span></div>
++      <div><strong>Safe & Reliable</strong><span>Service</span></div>
++      <div><strong>Save Energy</strong><span>Save Future</span></div>
++    </section>
++
++    <section class="section" id="services">
++      <p class="eyebrow">Solar Installation</p>
++      <h2>Solutions for every property</h2>
++      <div class="cards">
++        <article class="card">
++          <span class="icon">🏠</span>
++          <h3>Residential</h3>
++          <p>Smart rooftop solar systems that help homeowners reduce monthly electricity bills.</p>
++        </article>
++        <article class="card">
++          <span class="icon">🏢</span>
++          <h3>Commercial</h3>
++          <p>Efficient solar power planning for shops, offices, schools, hospitals, and businesses.</p>
++        </article>
++        <article class="card">
++          <span class="icon">🏭</span>
++          <h3>Industrial</h3>
++          <p>Scalable energy solutions for factories, warehouses, and high-load industrial units.</p>
++        </article>
++      </div>
++    </section>
++
++    <section class="section split" id="process">
++      <div>
++        <p class="eyebrow">Simple roadmap</p>
++        <h2>How your website helps generate leads</h2>
++        <ol class="steps">
++          <li><strong>Launch on GitHub Pages:</strong> publish this static website free with your business name, phone number, and service area.</li>
++          <li><strong>Add trust proof:</strong> upload real installation photos, customer reviews, subsidy details, and warranty information.</li>
++          <li><strong>Collect enquiries:</strong> connect the quote button to WhatsApp, Google Forms, or a CRM so every visitor becomes a lead.</li>
++          <li><strong>Promote locally:</strong> share the site on Google Business Profile, WhatsApp groups, Instagram, Facebook, and local directories.</li>
++        </ol>
++      </div>
++      <aside class="growth-box">
++        <h3>Growth checklist</h3>
++        <ul>
++          <li>Register and optimize Google Business Profile.</li>
++          <li>Post one project photo or short video every week.</li>
++          <li>Ask happy customers for Google reviews.</li>
++          <li>Run small location-based ads for “solar installation Nashik”.</li>
++          <li>Create referral offers for electricians, builders, and societies.</li>
++        </ul>
++      </aside>
++    </section>
++
++    <section class="section contact" id="contact">
++      <div>
++        <p class="eyebrow">Proudly serving Nashik & surrounding areas</p>
++        <h2>Ready to save with solar?</h2>
++        <p>Call today for a site visit, quotation, and guidance on the right solar system size for your home or business.</p>
++      </div>
++      <div class="contact-card">
++        <span>Contact</span>
++        <strong>Darshan Pagar</strong>
++        <a href="tel:+919075160204">9075160204</a>
++        <a class="button primary" href="https://wa.me/919075160204?text=Hello%20Bhavani%20Electricals%2C%20I%20want%20a%20solar%20installation%20quote." target="_blank" rel="noreferrer">Message on WhatsApp</a>
++      </div>
++    </section>
++  </main>
++</body>
++</html>
+ 
+EOF
+)
