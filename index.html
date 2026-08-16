@@ -4,73 +4,266 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhavani Electricals & Mitali Enterprises</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Futuristic Dark Energy Theme Variables */
+        :root {
+            --bg-dark: #0a0f1d;
+            --card-dark: #121829;
+            --neon-cyan: #00f2fe;
+            --neon-green: #4facfe;
+            --text-main: #ffffff;
+            --text-muted: #8fa0dd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* Animated subtle ambient glow background */
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(0, 242, 254, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(79, 172, 254, 0.05) 0px, transparent 50%);
+        }
+
+        /* Top Modern Futuristic Header */
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: linear-gradient(180deg, rgba(18,24,41,0.8) 0%, transparent 100%);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* Sticky Clean Navigation Links */
+        nav {
+            background-color: rgba(18, 24, 41, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            text-align: center;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--neon-cyan);
+        }
+
+        /* Centered Premium Layout Wrapper */
+        main {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Futuristic Glass Cards */
+        section {
+            background-color: var(--card-dark);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 242, 254, 0.15);
+        }
+
+        section h2 {
+            font-size: 1.6rem;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        /* Clean Neon Accent Indicator Lines */
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-green));
+            border-radius: 2px;
+        }
+
+        section p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Elegant Minimal Solutions List */
+        ul {
+            list-style: none;
+        }
+
+        li {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        li::before {
+            content: "✦";
+            color: var(--neon-cyan);
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        /* Action Dynamic Layout Wrapper */
+        .cta-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Futuristic Action Buttons */
+        .call-btn, .whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            padding: 1rem;
+            font-weight: 700;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .call-btn {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .call-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #00b4db, #0083b0);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 180, 219, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            box-shadow: 0 6px 20px rgba(0, 180, 219, 0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Minimal Centered Footer */
+        footer {
+            text-align: center;
+            padding: 4rem 1rem;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        /* Mobile Optimization Rules */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .cta-buttons { grid-template-columns: 1fr; }
+            section { padding: 1.5rem; }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Top Navigation Bar -->
-    <header class="navbar">
-        <div class="logo">
-            <span class="logo-main">bhavani</span><span class="logo-sub">electricals</span>
-        </div>
-        <nav class="nav-links">
-            <a href="#about">Company</a>
-            <a href="#services">Solutions</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Top Sticky Bar -->
+    <nav>
+        <a href="#about">Company</a>
+        <a href="#services">Solutions</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Main Title Content Banner -->
+    <header>
+        <h1>Bhavani Electricals</h1>
+        <p class="tagline">Mitali Enterprises</p>
     </header>
 
-    <!-- Main Hero Slider Section -->
-    <section class="hero-container">
-        <div class="hero-content">
-            <h1 class="hero-title">Bhavani in Q2 2026</h1>
-            <p class="hero-subtitle">Building sustainable, innovation-driven solar growth and long-term value creation across Nashik.</p>
-            <a href="https://wa.me" class="hero-link" target="_blank">Request a free quote &rarr;</a>
-            
-            <!-- Carousel Dots Indicators -->
-            <div class="carousel-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-        
-        <!-- Decorative Graphic Element (Right Side) -->
-        <div class="hero-graphic">
-            <div class="solar-node-art">☀️</div>
-        </div>
-    </section>
-
-    <!-- Main Content Details -->
-    <main class="content-wrapper">
-        <section id="about" class="info-block">
-            <h2>About Our Vision</h2>
-            <p>Bhavani Electricals & Mitali Enterprises designs and installs reliable solar systems for homes, businesses, and industries. We prioritize structural durability, optimal generation efficiency, and streamlined government subsidy processing.</p>
+    <main>
+        <!-- Vision Block Section -->
+        <section id="about">
+            <h2>Next-Gen Energy Solutions</h2>
+            <p>We engineer high-efficiency rooftop solar architectures across Nashik. Our technical teams deliver residential deployments, large-scale industrial projects, net metering integrations, and streamlined structural operations built for maximum durability.</p>
         </section>
 
-        <section id="services" class="info-block">
-            <h2>Our Core Solutions</h2>
-            <ul class="solutions-list">
-                <li>Rooftop Solar Installation (Residential & Commercial)</li>
-                <li>Net Metering & Government Subsidy Assistance</li>
-                <li>Industrial Electrical Turnkey Projects</li>
-                <li>Solar Panel Maintenance & Support</li>
+        <!-- Services Section Grid Layout -->
+        <section id="services">
+            <h2>Industrial Scope</h2>
+            <ul>
+                <li>Smart Rooftop Solar Arrays (Residential & Commercial)</li>
+                <li>Net Metering Sync & Subsidy Clearance Support</li>
+                <li>High-Voltage Turnkey Electrical Infrastructure</li>
+                <li>Predictive Solar Array Lifecycle Maintenance</li>
             </ul>
         </section>
 
-        <section id="contact" class="info-block contact-center">
-            <h2>Connect With Our Team</h2>
-            <p>Speak directly to our project head for pricing, assessment variations, or site logic evaluations.</p>
-            <div class="action-row">
-                <a href="tel:+919075160204" class="btn btn-call">📞 Call Darshan</a>
-                <a href="https://wa.me" class="btn btn-wa" target="_blank">💬 WhatsApp Chat</a>
+        <!-- Digital Communication Actions Block -->
+        <section id="contact">
+            <h2>Launch Your Engineering Consult</h2>
+            <p>Connect immediately with our primary engineering supervisor to schedule site evaluations, load analysis metrics, or customized project layout quotes.</p>
+            <div class="cta-buttons">
+                <a href="tel:+919075160204" class="call-btn">⚡ Direct Call</a>
+                <a href="https://wa.me" class="whatsapp-btn" target="_blank">🚀 WhatsApp Interface</a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Bhavani Electricals & Mitali Enterprises. All Rights Reserved.</p>
+        <p>&copy; 2026 Bhavani Electricals & Mitali Enterprises • Nashik, India</p>
     </footer>
 
 </body>
