@@ -87,7 +87,7 @@
 
         /* Main Content Wrapper */
         main {
-            max-width: 800px;
+            max-width: 850px;
             margin: 3rem auto;
             padding: 0 1.5rem;
         }
@@ -100,11 +100,6 @@
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.03);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        section:hover {
-            border-color: rgba(0, 242, 254, 0.15);
         }
 
         section h2 {
@@ -127,9 +122,9 @@
         }
 
         section h3 {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--neon-cyan);
-            margin: 2rem 0 1rem 0;
+            margin: 2.5rem 0 1.2rem 0;
         }
 
         section p {
@@ -159,12 +154,13 @@
             margin-right: 12px;
         }
 
-        /* Image Gallery Grid Layout */
+        /* Upgraded Responsive Flex Gallery Grid */
         .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 1.2rem;
             margin-top: 1.5rem;
+            justify-content: center;
         }
 
         .gallery-item {
@@ -172,7 +168,9 @@
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            height: 200px;
+            width: calc(50% - 0.6rem); /* Perfectly places 2 items side-by-side */
+            min-width: 280px;
+            height: 220px;
             background-color: rgba(255,255,255,0.02);
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
@@ -185,7 +183,7 @@
         }
 
         .gallery-item:hover img {
-            transform: scale(1.08);
+            transform: scale(1.06);
         }
 
         .gallery-label {
@@ -194,8 +192,8 @@
             left: 0;
             right: 0;
             background: linear-gradient(transparent, rgba(10, 15, 29, 0.95));
-            padding: 0.8rem 0.4rem 0.5rem 0.4rem;
-            font-size: 0.85rem;
+            padding: 1rem 0.5rem 0.6rem 0.5rem;
+            font-size: 0.9rem;
             text-align: center;
             color: var(--text-main);
             font-weight: 600;
@@ -221,7 +219,7 @@
             color: var(--text-main);
         }
 
-        .form-group input, .form-group select, .form-group textarea {
+        .form-group input, .form-group select {
             background-color: rgba(255, 255, 255, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 0.8rem;
@@ -232,7 +230,7 @@
             transition: border-color 0.3s ease;
         }
 
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+        .form-group input:focus, .form-group select:focus {
             border-color: var(--neon-cyan);
         }
 
@@ -253,6 +251,7 @@
             cursor: pointer;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-align: center;
+            margin-top: 1rem;
         }
 
         .submit-btn:hover {
@@ -269,9 +268,10 @@
             border-top: 1px solid rgba(255, 255, 255, 0.03);
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 650px) {
             header h1 { font-size: 2rem; }
             section { padding: 1.5rem; }
+            .gallery-item { width: 100%; } /* Stacks images vertically on mobile */
         }
     </style>
 </head>
@@ -309,7 +309,7 @@
                 <li>Net Metering System with MSEDCL approval</li>
             </ul>
 
-            <!-- Gallery Sub-Grid Area displaying all 5 images -->
+            <!-- Gallery Sub-Grid Area displaying all 5 images sequentially -->
             <h3>Our Completed Rooftop Projects</h3>
             <div class="image-gallery">
                 <div class="gallery-item">
@@ -323,3 +323,10 @@
                 <div class="gallery-item">
                     <img src="project3.jpg" alt="Residential Solar Project 3">
                     <div class="gallery-label">Project View 3</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="project4.jpg" alt="Residential Solar Project 4">
+                    <div class="gallery-label">Project View 4</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="project5.jpg" alt="Residential Solar Project 5">
