@@ -11,8 +11,6 @@
             --card-dark: #121829;
             --neon-cyan: #00f2fe;
             --neon-green: #4facfe;
-            --neon-whatsapp: #25D366;
-            --neon-mail: #ff4e50;
             --text-main: #ffffff;
             --text-muted: #8fa0dd;
         }
@@ -29,7 +27,6 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
-            padding-bottom: 70px; /* Space for the floating bottom bar */
             background-image: 
                 radial-gradient(at 0% 0%, rgba(0, 242, 254, 0.05) 0px, transparent 50%),
                 radial-gradient(at 100% 100%, rgba(79, 172, 254, 0.05) 0px, transparent 50%);
@@ -157,7 +154,7 @@
             margin-right: 12px;
         }
 
-        /* Image Gallery */
+        /* Upgraded Responsive Flex Gallery Grid */
         .image-gallery {
             display: flex;
             flex-wrap: wrap;
@@ -171,9 +168,10 @@
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.08);
-            width: calc(50% - 0.6rem);
+            width: calc(50% - 0.6rem); /* Perfectly places 2 items side-by-side */
             min-width: 280px;
             height: 220px;
+            background-color: rgba(255,255,255,0.02);
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
@@ -181,7 +179,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: transform 0.3s ease;
         }
 
         .gallery-item:hover img {
@@ -200,72 +198,6 @@
             color: var(--text-main);
             font-weight: 600;
         }
-
-        /* Animated Interactive Contact Grid */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.2rem;
-            margin-top: 1.5rem;
-        }
-
-        .contact-card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1.8rem;
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-main);
-            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-align: center;
-        }
-
-        .contact-card svg {
-            width: 36px;
-            height: 36px;
-            margin-bottom: 0.8rem;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-card span {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-            margin-bottom: 0.2rem;
-        }
-
-        .contact-card strong {
-            font-size: 1.05rem;
-            word-break: break-all;
-        }
-
-        /* Hover animations per card type */
-        .card-phone:hover {
-            border-color: var(--neon-cyan);
-            box-shadow: 0 5px 20px rgba(0, 242, 254, 0.15);
-            transform: translateY(-5px);
-        }
-        .card-phone:hover svg { color: var(--neon-cyan); transform: rotate(15deg); }
-
-        .card-whatsapp:hover {
-            border-color: var(--neon-whatsapp);
-            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.15);
-            transform: translateY(-5px);
-        }
-        .card-whatsapp:hover svg { color: var(--neon-whatsapp); transform: scale(1.15); }
-
-        .card-mail:hover {
-            border-color: var(--neon-mail);
-            box-shadow: 0 5px 20px rgba(255, 78, 80, 0.15);
-            transform: translateY(-5px);
-        }
-        .card-mail:hover svg { color: var(--neon-mail); transform: translateY(-3px); }
 
         /* Interactive Inquiry Form Design */
         .order-form {
@@ -327,14 +259,66 @@
             box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
         }
 
-        /* Floating Futuristic Bottom Sticky Action Bar */
-        .sticky-action-bar {
-            position: fixed;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: calc(100% - 30px);
-            max-width: 500px;
-            background: rgba(18, 24, 41, 0.85);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+        /* Footer Structure */
+        footer {
+            text-align: center;
+            padding: 4rem 1rem;
+            color: rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        @media (max-width: 650px) {
+            header h1 { font-size: 2rem; }
+            section { padding: 1.5rem; }
+            .gallery-item { width: 100%; } /* Stacks images vertically on mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#residential">Residential</a>
+        <a href="#industrial">Industrial</a>
+        <a href="#order">Place Order</a>
+    </nav>
+
+    <!-- Header Block -->
+    <header>
+        <h1>Bhavani Electricals</h1>
+        <p class="tagline">Mitali Enterprises</p>
+    </header>
+
+    <main>
+        <!-- About Overview Section -->
+        <section id="about">
+            <h2>Next-Gen Energy Solutions</h2>
+            <p>We deliver specialized electrical architecture and premium rooftop solar grids across Nashik. From family homes trying to eliminate light bills to large factories powering critical infrastructure, we handle your projects with clean engineering precision.</p>
+        </section>
+
+        <!-- 1) RESIDENTIAL SOLAR SECTION WITH IMAGE GALLERY -->
+        <section id="residential">
+            <h2>1. Residential Solar Systems</h2>
+            <p>Cut your monthly home electricity bills down to zero. We design clean, safe, and highly durable home solar installations tailored to your roof space.</p>
+            <ul>
+                <li>On-Grid & Off-Grid Home Solar Plant Setup</li>
+                <li>Full Support for Government Subsidies & Apply Processing</li>
+                <li>High-Efficiency Modules with 25 Years Warranty</li>
+                <li>Net Metering System with MSEDCL approval</li>
+            </ul>
+
+            <!-- Gallery Sub-Grid Area displaying all 5 images sequentially -->
+            <h3>Our Completed Rooftop Projects</h3>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="project1.jpg" alt="Residential Solar Project 1">
+                    <div class="gallery-label">Project View 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="project2.jpg" alt="Residential Solar Project 2">
+                    <div class="gallery-label">Project View 2</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="project3.jpg" alt="Residential Solar Project 3">
