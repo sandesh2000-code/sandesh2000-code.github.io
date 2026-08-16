@@ -86,9 +86,9 @@
             box-shadow: 0 6px 12px rgba(242, 153, 74, 0.4);
         }
 
-        /* Hero Banner Section using your main image.jpg */
+        /* Hero Banner Section */
         .hero {
-            background: linear-gradient(rgba(11, 21, 40, 0.65), rgba(11, 21, 40, 0.65)), url('image.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(11, 21, 40, 0.65), rgba(11, 21, 40, 0.65)), url('banner.jpg') no-repeat center center/cover;
             color: var(--white);
             padding: 120px 6% 100px 6%;
             text-align: center;
@@ -159,7 +159,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 35px;
             max-width: 1200px;
             margin: 0 auto;
@@ -167,15 +167,16 @@
 
         .card {
             background: var(--white);
-            padding: 30px;
+            padding: 40px 30px;
             border-radius: 12px;
             box-shadow: 0 10px 20px rgba(0,0,0,0.04);
             transition: 0.3s ease;
             border-top: 5px solid var(--primary-dark);
-            text-align: left;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
         }
 
         .card.res { border-top-color: var(--accent-green); }
@@ -183,8 +184,8 @@
         .card.ind { border-top-color: var(--primary-dark); }
 
         .card-icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
         .card h3 {
@@ -196,26 +197,7 @@
 
         .card p {
             color: #555;
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
-
-        /* Display photo beautifully inside tabs */
-        .tab-photo {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid #e2e8f0;
-            margin-top: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            transition: 0.3s ease;
-        }
-
-        .tab-photo:hover {
-            transform: scale(1.02);
-            border-color: var(--accent-green);
+            font-size: 1rem;
         }
 
         /* Contact Section */
@@ -346,11 +328,24 @@
         <a href="tel:+919075160204" class="header-cta">📞 Call: 9075160204</a>
     </header>
 
+    <!-- Main Banner Section -->
     <section class="hero">
         <h1>All Types Of <span>Solar Works</span> in Nashik</h1>
         <p>Clean Energy, Better Tomorrow. Switch to reliable solar solutions to reduce power expenses and secure your energy future.</p>
         <a href="https://wa.me." class="whatsapp-btn" style="display:inline-block; max-width:250px; margin:0 auto;" target="_blank">Get A Free Quote</a>
     </section>
 
+    <!-- Value Badges Bar -->
     <div class="features-bar">
         <div class="feature-item"><span>☀️</span> High Quality Solar Solutions</div>
+        <div class="feature-item"><span>⚙️</span> Professional Installation</div>
+        <div class="feature-item"><span>🛡️</span> Safe & Reliable Service</div>
+        <div class="feature-item"><span>🌱</span> Save Energy, Save Future</div>
+    </div>
+
+    <!-- Services Grid Section -->
+    <section class="services">
+        <h2>Solar Installation Services</h2>
+        <p class="sub-title">Expert engineering tailored for every kind of property layout</p>
+        
+        <div class="grid">
