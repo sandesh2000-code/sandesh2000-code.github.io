@@ -5,320 +5,297 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhavani Electricals & Mitali Enterprises</title>
     <style>
-        /* Futuristic Dark Energy Theme Variables */
-        :root {
-            --bg-dark: #0a0f1d;
-            --card-dark: #121829;
-            --neon-cyan: #00f2fe;
-            --neon-green: #4facfe;
-            --text-main: #ffffff;
-            --text-muted: #8fa0dd;
-        }
-
+        /* Premium Corporate Color Theme (Inspired by Lupin Layout) */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
+            background-color: #ffffff;
+            color: #333333;
             line-height: 1.6;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(0, 242, 254, 0.05) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(79, 172, 254, 0.05) 0px, transparent 50%);
         }
 
-        /* Navigation Bar */
-        nav {
-            background-color: rgba(18, 24, 41, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            text-align: center;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        /* Top Hero Banner in Deep Corporate Green */
+        .hero-banner {
+            background: linear-gradient(135deg, #09472a 0%, #0d5c36 100%);
+            color: #ffffff;
+            padding: 2rem 5% 5rem 5%;
+            position: relative;
+        }
+
+        /* Minimal Header Layout within the Banner */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo-area h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
         }
 
         nav a {
-            color: var(--text-main);
+            color: #ffffff;
             text-decoration: none;
-            margin: 0 1.2rem;
-            font-weight: 600;
+            margin-left: 2rem;
             font-size: 0.95rem;
-            transition: color 0.3s ease;
+            font-weight: normal;
+            opacity: 0.9;
+            transition: opacity 0.2s ease;
         }
 
         nav a:hover {
-            color: var(--neon-cyan);
+            opacity: 1;
         }
 
-        /* Header Block */
-        header {
-            text-align: center;
-            padding: 4rem 1rem;
-            position: relative;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            background: linear-gradient(180deg, rgba(18,24,41,0.8) 0%, transparent 100%);
+        /* Banner Text Section */
+        .banner-content {
+            max-width: 600px;
+            margin-top: 3.5rem;
         }
 
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
-
-        /* Main Content Wrapper */
-        main {
-            max-width: 850px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Glass Cards */
-        section {
-            background-color: var(--card-dark);
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-        }
-
-        section h2 {
-            font-size: 1.6rem;
-            color: var(--text-main);
-            margin-bottom: 1.2rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        section h2::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 40px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--neon-cyan), var(--neon-green));
-            border-radius: 2px;
-        }
-
-        section h3 {
-            font-size: 1.3rem;
-            color: var(--neon-cyan);
-            margin: 2.5rem 0 1.2rem 0;
-        }
-
-        section p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
-        }
-
-        ul {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        li {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 0.8rem;
-            display: flex;
-            align-items: center;
-        }
-
-        li::before {
-            content: "✦";
-            color: var(--neon-cyan);
+        .banner-content h1 {
+            font-size: 3rem;
             font-weight: bold;
-            margin-right: 12px;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
         }
 
-        /* Upgraded Responsive Flex Gallery Grid */
-        .image-gallery {
+        .banner-content p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            margin-bottom: 2rem;
+        }
+
+        /* Clean "Know More" Style Call-to-Action Button */
+        .know-more-btn {
+            display: inline-block;
+            background-color: #128c54;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.8rem 2rem;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .know-more-btn:hover {
+            background-color: #16a362;
+        }
+
+        /* Pure White Corporate Main Content Area */
+        main {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        /* Content Blocks */
+        .corporate-section {
+            margin-bottom: 4rem;
+        }
+
+        .corporate-section h2 {
+            color: #09472a;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .corporate-section p {
+            color: #555555;
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Clean Service Lists */
+        .service-list {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .service-list li {
+            background-color: #f8faf9;
+            padding: 1.5rem;
+            border-left: 4px solid #128c54;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.05rem;
+            color: #333333;
+        }
+
+        /* Symmetric Portfolio Image Layout Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .portfolio-item {
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #f8faf9;
+            border: 1px solid #e0e0e0;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .portfolio-label {
+            padding: 1rem;
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #09472a;
+            text-align: center;
+        }
+
+        /* Minimal Inverted Contact Area */
+        .contact-box {
+            background-color: #f8faf9;
+            border: 1px solid #e0e0e0;
+            padding: 2.5rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .contact-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.2rem;
-            margin-top: 1.5rem;
             justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
         }
 
-        .gallery-item {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            width: calc(50% - 0.6rem); /* Perfectly places 2 items side-by-side */
-            min-width: 280px;
-            height: 220px;
-            background-color: rgba(255,255,255,0.02);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        .contact-link-item {
+            color: #09472a;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
 
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
+        .contact-link-item:hover {
+            text-decoration: underline;
         }
 
-        .gallery-item:hover img {
-            transform: scale(1.06);
-        }
-
-        .gallery-label {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(10, 15, 29, 0.95));
-            padding: 1rem 0.5rem 0.6rem 0.5rem;
-            font-size: 0.9rem;
-            text-align: center;
-            color: var(--text-main);
-            font-weight: 600;
-        }
-
-        /* Interactive Inquiry Form Design */
-        .order-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.2rem;
-            margin-top: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-        }
-
-        .form-group label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .form-group input, .form-group select {
-            background-color: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 0.8rem;
-            border-radius: 8px;
-            color: white;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus, .form-group select:focus {
-            border-color: var(--neon-cyan);
-        }
-
-        .form-group select option {
-            background-color: var(--card-dark);
-            color: white;
-        }
-
-        /* Form Submissions Button */
-        .submit-btn {
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-green));
-            color: #0a0f1d;
-            border: none;
-            padding: 1rem;
-            font-weight: 700;
-            font-size: 1rem;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            text-align: center;
-            margin-top: 1rem;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
-        }
-
-        /* Footer Structure */
+        /* Clean Corporate Footer */
         footer {
+            border-top: 1px solid #e0e0e0;
             text-align: center;
-            padding: 4rem 1rem;
-            color: rgba(255, 255, 255, 0.2);
+            padding: 3rem 1rem;
+            color: #777777;
             font-size: 0.9rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            background-color: #fdfdfd;
         }
 
-        @media (max-width: 650px) {
-            header h1 { font-size: 2rem; }
-            section { padding: 1.5rem; }
-            .gallery-item { width: 100%; } /* Stacks images vertically on mobile */
+        /* Mobile View Rules */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 1rem; text-align: center; padding-bottom: 2rem; }
+            nav a { margin: 0 0.8rem; }
+            .banner-content h1 { font-size: 2.2rem; }
+            .banner-content { text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Menu -->
-    <nav>
-        <a href="#about">About</a>
-        <a href="#residential">Residential</a>
-        <a href="#industrial">Industrial</a>
-        <a href="#order">Place Order</a>
-    </nav>
+    <!-- Top Corporate Header & Banner Block -->
+    <div class="hero-banner">
+        <header>
+            <div class="logo-area">
+                <h2>BHAVANI ELECTRICALS</h2>
+            </div>
+            <nav>
+                <a href="#about">About Us</a>
+                <a href="#residential">Residential</a>
+                <a href="#industrial">Industrial</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
 
-    <!-- Header Block -->
-    <header>
-        <h1>Bhavani Electricals</h1>
-        <p class="tagline">Mitali Enterprises</p>
-    </header>
+        <div class="banner-content">
+            <h1>Advancing Clean Energy for All</h1>
+            <p>Bhavani Electricals & Mitali Enterprises designs and installs premium, sustainable solar architectures for homes and industries throughout Nashik.</p>
+            <a href="https://wa.me" class="know-more-btn" target="_blank">Connect Now</a>
+        </div>
+    </div>
 
+    <!-- Main Content Area -->
     <main>
-        <!-- About Overview Section -->
-        <section id="about">
-            <h2>Next-Gen Energy Solutions</h2>
-            <p>We deliver specialized electrical architecture and premium rooftop solar grids across Nashik. From family homes trying to eliminate light bills to large factories powering critical infrastructure, we handle your projects with clean engineering precision.</p>
+        
+        <!-- About Block -->
+        <section id="about" class="corporate-section">
+            <h2>Our Business Journey</h2>
+            <p>We are dedicated to building a better tomorrow through structural durability, optimized power generation efficiency, and simplified processing for government solar subsidies. Our team handles every element of your power distribution setup with engineering accuracy.</p>
         </section>
 
-        <!-- 1) RESIDENTIAL SOLAR SECTION WITH IMAGE GALLERY -->
-        <section id="residential">
+        <!-- 1) Residential Section -->
+        <section id="residential" class="corporate-section">
             <h2>1. Residential Solar Systems</h2>
-            <p>Cut your monthly home electricity bills down to zero. We design clean, safe, and highly durable home solar installations tailored to your roof space.</p>
-            <ul>
-                <li>On-Grid & Off-Grid Home Solar Plant Setup</li>
-                <li>Full Support for Government Subsidies & Apply Processing</li>
-                <li>High-Efficiency Modules with 25 Years Warranty</li>
-                <li>Net Metering System with MSEDCL approval</li>
+            <p>Eliminate your monthly household electricity bills entirely. We provide robust, long-term rooftop solar plants customized to suit your available roof layout footprint.</p>
+            <ul class="service-list">
+                <li>On-Grid Home Solar Plant Integration</li>
+                <li>Net Metering Synchronization via MSEDCL</li>
+                <li>Government Subsidy Verification & Clearances</li>
+                <li>Premium High-Efficiency Panel Implementations</li>
             </ul>
 
-            <!-- Gallery Sub-Grid Area displaying all 5 images sequentially -->
-            <h3>Our Completed Rooftop Projects</h3>
-            <div class="image-gallery">
-                <div class="gallery-item">
-                    <img src="project1.jpg" alt="Residential Solar Project 1">
-                    <div class="gallery-label">Project View 1</div>
+            <h3 style="margin-top: 2rem; color: #09472a;">Completed Residential Portfolio</h3>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Rooftop Project 1">
+                    <div class="portfolio-label">Installation Site 1</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="project2.jpg" alt="Residential Solar Project 2">
-                    <div class="gallery-label">Project View 2</div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Rooftop Project 2">
+                    <div class="portfolio-label">Installation Site 2</div>
                 </div>
-                <div class="gallery-item">
-                    <img src="project3.jpg" alt="Residential Solar Project 3">
+                <div class="portfolio-item">
+                    <img src="project3.jpg" alt="Rooftop Project 3">
+                    <div class="portfolio-label">Installation Site 3</div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project4.jpg" alt="Rooftop Project 4">
+                    <div class="portfolio-label">Installation Site 4</div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project5.jpg" alt="Rooftop Project 5">
+                    <div class="portfolio-label">Installation Site 5</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2) Industrial Section -->
+        <section id="industrial" class="corporate-section">
+            <h2>2. Industrial & Commercial Solutions</h2>
+            <p>Reduce commercial operational costs using robust energy management solutions. We deploy heavy-duty plant engineering setups matching strict factory criteria codes.</p>
+            <ul class="service-list">
+                <li>Large-Scale Commercial Rooftop Power Grids</li>
+                <li>Turnkey Factory Wiring & Electrical Infrastructure</li>
+                <li>HT/LT Panel Engineering & Transformer Deployments</li>
+                <li>Power Factor Optimization Systems</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="corporate-section">
+            <div class="contact-box">
+                <h2>Contact Our Office</h2>
+                <p>Reach out directly to schedule a clean technical site assessment or consultation with our project heads.</p>
+                <div class="contact-links">
+                    <a href="tel:+919075160204" class="contact-link-item">📞 Phone: 9075160204</a>
