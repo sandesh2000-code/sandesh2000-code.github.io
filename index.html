@@ -174,11 +174,6 @@
             border-top: 5px solid var(--primary-dark);
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
-        }
-
         .card.res { border-top-color: var(--accent-green); }
         .card.com { border-top-color: var(--accent-orange); }
         .card.ind { border-top-color: var(--primary-dark); }
@@ -195,9 +190,55 @@
             font-weight: 700;
         }
 
-        .card p {
-            color: #555;
+        /* Work Gallery Section */
+        .gallery-section {
+            padding: 90px 6%;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            font-size: 2.3rem;
+            color: var(--primary-dark);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+            border: 3px solid var(--light-bg);
+            background: var(--light-bg);
+            transition: 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+            border-color: var(--accent-green);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .gallery-caption {
+            padding: 15px;
+            font-weight: 600;
             font-size: 1rem;
+            color: var(--primary-dark);
+            background: var(--white);
         }
 
         /* Contact Section */
@@ -258,21 +299,28 @@
             color: var(--accent-orange);
         }
 
+        .maps-btn {
+            display: block;
+            background-color: #4285F4;
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
         .whatsapp-btn {
-            display: inline-block;
+            display: block;
             background-color: #25d366;
             color: var(--white);
-            padding: 12px 30px;
+            padding: 12px 20px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.05rem;
             transition: 0.3s;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #20ba5a;
-            transform: scale(1.03);
         }
 
         footer {
@@ -284,23 +332,19 @@
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        /* Mobile View Fixes */
         @media (max-width: 768px) {
             header { flex-direction: column; text-align: center; gap: 15px; }
             .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1.1rem; }
             .phone-link { font-size: 1.5rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Area Bar -->
     <div class="top-banner">
         📍 Proudly Serving Nashik & Surrounding Areas
     </div>
 
-    <!-- Navigation Bar -->
     <header>
         <div class="brand-logo">
             <span class="brand-main">BHAVANI ELECTRICALS</span>
@@ -309,35 +353,10 @@
         <a href="tel:+919075160204" class="header-cta">📞 Call: 9075160204</a>
     </header>
 
-    <!-- Main Banner Section -->
     <section class="hero">
         <h1>All Types Of <span>Solar Works</span> in Nashik</h1>
         <p>Clean Energy, Better Tomorrow. Switch to reliable solar solutions to reduce power expenses and secure your energy future.</p>
-        <a href="https://wa.me." class="whatsapp-btn" target="_blank">Get A Free Quote</a>
+        <a href="https://wa.me." class="whatsapp-btn" style="display:inline-block; max-width:250px; margin:0 auto;" target="_blank">Get A Free Quote</a>
     </section>
 
-    <!-- Value Badges Bar -->
     <div class="features-bar">
-        <div class="feature-item"><span>☀️</span> High Quality Solar Solutions</div>
-        <div class="feature-item"><span>⚙️</span> Professional Installation</div>
-        <div class="feature-item"><span>🛡️</span> Safe & Reliable Service</div>
-        <div class="feature-item"><span>🌱</span> Save Energy, Save Future</div>
-    </div>
-
-    <!-- Services Grid Section -->
-    <section class="services">
-        <h2>Solar Installation Services</h2>
-        <p class="sub-title">Expert engineering tailored for every kind of property layout</p>
-        
-        <div class="grid">
-            <!-- Residential Card -->
-            <div class="card res">
-                <div class="card-icon">🏠</div>
-                <h3>RESIDENTIAL</h3>
-                <p>Smart Solar for Your Home. Cut down your family's monthly electricity bills permanently with durable home rooftop panel grids.</p>
-            </div>
-
-            <!-- Commercial Card -->
-            <div class="card com">
-                <div class="card-icon">🏢</div>
-                <h3>COMMERCIAL</h3>
