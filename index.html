@@ -32,33 +32,6 @@
                 radial-gradient(at 100% 100%, rgba(79, 172, 254, 0.05) 0px, transparent 50%);
         }
 
-        /* Top Header */
-        header {
-            text-align: center;
-            padding: 4rem 1rem;
-            position: relative;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            background: linear-gradient(180deg, rgba(18,24,41,0.8) 0%, transparent 100%);
-        }
-
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-green));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 600;
-        }
-
         /* Navigation Bar */
         nav {
             background-color: rgba(18, 24, 41, 0.85);
@@ -85,6 +58,33 @@
             color: var(--neon-cyan);
         }
 
+        /* Header Block */
+        header {
+            text-align: center;
+            padding: 4rem 1rem;
+            position: relative;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: linear-gradient(180deg, rgba(18,24,41,0.8) 0%, transparent 100%);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
         /* Main Content Wrapper */
         main {
             max-width: 800px;
@@ -104,7 +104,6 @@
         }
 
         section:hover {
-            transform: translateY(-4px);
             border-color: rgba(0, 242, 254, 0.15);
         }
 
@@ -127,6 +126,12 @@
             border-radius: 2px;
         }
 
+        section h3 {
+            font-size: 1.2rem;
+            color: var(--neon-cyan);
+            margin: 2rem 0 1rem 0;
+        }
+
         section p {
             color: var(--text-muted);
             font-size: 1.05rem;
@@ -134,9 +139,9 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Bullet lists */
         ul {
             list-style: none;
+            margin-bottom: 1.5rem;
         }
 
         li {
@@ -154,47 +159,108 @@
             margin-right: 12px;
         }
 
-        /* Action Buttons Layout */
-        .cta-buttons {
+        /* Image Gallery Grid Layout */
+        .image-gallery {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
+            margin-top: 1.5rem;
         }
 
-        .call-btn, .whatsapp-btn {
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            height: 200px;
+            background-color: rgba(255,255,255,0.02);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(10, 15, 29, 0.95));
+            padding: 0.8rem 0.4rem 0.5rem 0.4rem;
+            font-size: 0.85rem;
+            text-align: center;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        /* Interactive Inquiry Form Design */
+        .order-form {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.8rem;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--neon-cyan);
+        }
+
+        .form-group select option {
+            background-color: var(--card-dark);
+            color: white;
+        }
+
+        /* Form Submissions Button */
+        .submit-btn {
+            background: linear-gradient(135deg, var(--neon-cyan), var(--neon-green));
+            color: #0a0f1d;
+            border: none;
             padding: 1rem;
             font-weight: 700;
-            border-radius: 12px;
-            transition: all 0.3s ease;
             font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-align: center;
         }
 
-        .call-btn {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-main);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .call-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .whatsapp-btn {
-            background: linear-gradient(135deg, #00b4db, #0083b0);
-            color: white;
-            box-shadow: 0 4px 15px rgba(0, 180, 219, 0.3);
-        }
-
-        .whatsapp-btn:hover {
-            box-shadow: 0 6px 20px rgba(0, 180, 219, 0.5);
+        .submit-btn:hover {
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 242, 254, 0.4);
         }
 
+        /* Footer Structure */
         footer {
             text-align: center;
             padding: 4rem 1rem;
@@ -205,7 +271,6 @@
 
         @media (max-width: 600px) {
             header h1 { font-size: 2rem; }
-            .cta-buttons { grid-template-columns: 1fr; }
             section { padding: 1.5rem; }
         }
     </style>
@@ -217,7 +282,7 @@
         <a href="#about">About</a>
         <a href="#residential">Residential</a>
         <a href="#industrial">Industrial</a>
-        <a href="#contact">Contact</a>
+        <a href="#order">Place Order</a>
     </nav>
 
     <!-- Header Block -->
@@ -233,7 +298,7 @@
             <p>We deliver specialized electrical architecture and premium rooftop solar grids across Nashik. From family homes trying to eliminate light bills to large factories powering critical infrastructure, we handle your projects with clean engineering precision.</p>
         </section>
 
-        <!-- 1) RESIDENTIAL SOLAR SECTION -->
+        <!-- 1) RESIDENTIAL SOLAR SECTION WITH IMAGE GALLERY -->
         <section id="residential">
             <h2>1. Residential Solar Systems</h2>
             <p>Cut your monthly home electricity bills down to zero. We design clean, safe, and highly durable home solar installations tailored to your roof space.</p>
@@ -243,34 +308,18 @@
                 <li>High-Efficiency Modules with 25 Years Warranty</li>
                 <li>Net Metering System with MSEDCL approval</li>
             </ul>
-        </section>
 
-        <!-- 2) INDUSTRIAL SOLUTIONS SECTION -->
-        <section id="industrial">
-            <h2>2. Industrial & Commercial Solutions</h2>
-            <p>Power your business with optimized energy models. We build rugged, heavy-duty electrical setups and industrial-scale solar grids that minimize operational costs.</p>
-            <ul>
-                <li>Large-Scale Commercial Rooftop Solar Plants</li>
-                <li>Turnkey Industrial Electrical Projects & Wiring</li>
-                <li>HT/LT Panel Installation & Transformer Support</li>
-                <li>Power Factor Correction & Energy Management Systems</li>
-            </ul>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Launch Your Project Consult</h2>
-            <p>Connect with our primary project head to schedule your technical site evaluation or to request custom structural quotes.</p>
-            <div class="cta-buttons">
-                <a href="tel:+919075160204" class="call-btn">⚡ Direct Call</a>
-                <a href="https://wa.me" class="whatsapp-btn" target="_blank">🚀 WhatsApp Interface</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Bhavani Electricals & Mitali Enterprises • Nashik, India</p>
-    </footer>
-
-</body>
-</html>
+            <!-- Gallery Sub-Grid Area displaying all 5 images -->
+            <h3>Our Completed Rooftop Projects</h3>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="project1.jpg" alt="Residential Solar Project 1">
+                    <div class="gallery-label">Project View 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="project2.jpg" alt="Residential Solar Project 2">
+                    <div class="gallery-label">Project View 2</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="project3.jpg" alt="Residential Solar Project 3">
+                    <div class="gallery-label">Project View 3</div>
