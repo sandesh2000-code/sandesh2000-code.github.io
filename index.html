@@ -258,21 +258,40 @@
             color: var(--accent-orange);
         }
 
+        .maps-btn {
+            display: block;
+            background-color: #4285F4;
+            color: var(--white);
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 15px;
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(66, 133, 244, 0.3);
+        }
+
+        .maps-btn:hover {
+            background-color: #357ae8;
+            transform: translateY(-2px);
+        }
+
         .whatsapp-btn {
-            display: inline-block;
+            display: block;
             background-color: #25d366;
             color: var(--white);
-            padding: 12px 30px;
+            padding: 12px 20px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 700;
             font-size: 1.05rem;
             transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(37, 211, 102, 0.3);
         }
 
         .whatsapp-btn:hover {
             background-color: #20ba5a;
-            transform: scale(1.03);
+            transform: translateY(-2px);
         }
 
         footer {
@@ -313,7 +332,7 @@
     <section class="hero">
         <h1>All Types Of <span>Solar Works</span> in Nashik</h1>
         <p>Clean Energy, Better Tomorrow. Switch to reliable solar solutions to reduce power expenses and secure your energy future.</p>
-        <a href="https://wa.me." class="whatsapp-btn" target="_blank">Get A Free Quote</a>
+        <a href="https://wa.me." class="whatsapp-btn" style="display:inline-block; max-width:250px; margin:0 auto;" target="_blank">Get A Free Quote</a>
     </section>
 
     <!-- Value Badges Bar -->
@@ -330,14 +349,3 @@
         <p class="sub-title">Expert engineering tailored for every kind of property layout</p>
         
         <div class="grid">
-            <!-- Residential Card -->
-            <div class="card res">
-                <div class="card-icon">🏠</div>
-                <h3>RESIDENTIAL</h3>
-                <p>Smart Solar for Your Home. Cut down your family's monthly electricity bills permanently with durable home rooftop panel grids.</p>
-            </div>
-
-            <!-- Commercial Card -->
-            <div class="card com">
-                <div class="card-icon">🏢</div>
-                <h3>COMMERCIAL</h3>
