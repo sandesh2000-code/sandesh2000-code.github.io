@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bhavani Electricals & Mitali Enterprises</title>
     <style>
-        /* Minimalist Corporate Framework (Lupin Benchmark Design) */
+        /* Corporate Identity Framework (Lupin Clean Aesthetic) */
         * {
             margin: 0;
             padding: 0;
@@ -27,7 +27,7 @@
             position: relative;
         }
 
-        /* Top Horizontal Clean Mainframe Header alignment */
+        /* Top Horizontal Clean Navigation Bar */
         header {
             display: flex;
             justify-content: space-between;
@@ -76,7 +76,7 @@
             margin-bottom: 2.5rem;
         }
 
-        /* Flat Clean "Know More" Action Button with micro-transition */
+        /* Flat Clean Action Button */
         .know-more-btn {
             display: inline-block;
             background-color: #117a4a;
@@ -107,15 +107,21 @@
         .corporate-section h2 {
             color: #063923;
             font-size: 2rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.5rem;
             font-weight: bold;
         }
 
-        /* Professional System Grid Structure */
+        .section-desc {
+            color: #666666;
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* System Engineering Components Grid */
         .system-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
@@ -128,46 +134,49 @@
 
         .system-card h3 {
             color: #063923;
-            font-size: 1.25rem;
+            font-size: 1.2rem;
             margin-bottom: 0.75rem;
             font-weight: bold;
         }
 
         .system-card p {
             color: #555555;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
-        /* Benefits Row Structure */
-        .benefits-row {
+        /* Metric Value Metrics Rows */
+        .metrics-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
         }
 
-        .benefit-item {
-            padding: 1.5rem 0;
-            border-bottom: 1px solid #e8ede9;
+        .metric-card {
+            background-color: #ffffff;
+            border: 1px solid #117a4a;
+            padding: 1.5rem;
+            border-radius: 4px;
+            text-align: center;
         }
 
-        .benefit-item h3 {
+        .metric-card h3 {
             color: #117a4a;
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .metric-card p {
+            color: #333333;
             font-weight: bold;
+            font-size: 1.25rem;
         }
 
-        .benefit-item p {
-            color: #555555;
-            font-size: 1rem;
-        }
-
-        /* Geometric Portfolio Image Section Grid */
+        /* Geometric Symmetric Portfolio Gallery Grid */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
             margin-top: 2rem;
         }
 
@@ -194,13 +203,73 @@
             border-top: 1px solid #e2e8e4;
         }
 
-        /* Minimal Inverted Contact Panel Block */
+        /* Clean Corporate Form Layout */
+        .form-box {
+            background-color: #f9fbf9;
+            border: 1px solid #e2e8e4;
+            padding: 3rem 2rem;
+            border-radius: 4px;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .order-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group label {
+            font-size: 0.95rem;
+            font-weight: bold;
+            color: #063923;
+        }
+
+        .form-group input, .form-group select {
+            padding: 0.85rem;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            outline: none;
+            background-color: #ffffff;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            border-color: #117a4a;
+        }
+
+        .submit-btn {
+            background-color: #117a4a;
+            color: #ffffff;
+            border: none;
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0d5c36;
+        }
+
+        /* Contact Details Panel Box */
         .contact-box {
             background-color: #f9fbf9;
             border: 1px solid #e2e8e4;
             padding: 3rem 2rem;
             border-radius: 4px;
             text-align: center;
+            margin-top: 4rem;
         }
 
         .contact-links {
@@ -222,7 +291,7 @@
             text-decoration: underline;
         }
 
-        /* Structural Corporate Footer block matching copyright rules */
+        /* Structural Corporate Footer */
         footer {
             border-top: 1px solid #e2e8e4;
             text-align: center;
@@ -232,7 +301,7 @@
             background-color: #fafafa;
         }
 
-        /* Mobile Viewports Rules Configuration */
+        /* Responsive Viewports Adjustment rules */
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 1.5rem; text-align: center; padding-bottom: 2.5rem; }
             nav a { margin: 0 0.8rem; }
@@ -250,17 +319,17 @@
                 <h2>Bhavani Electricals</h2>
             </div>
             <nav>
-                <a href="#system">Solar Infrastructure</a>
-                <a href="#benefits">Main Benefits</a>
+                <a href="#system">Solar Profile</a>
+                <a href="#metrics">System Benefits</a>
                 <a href="#portfolio">Our Portfolio</a>
-                <a href="#contact">Contact</a>
+                <a href="#order">Inquiry</a>
             </nav>
         </header>
 
         <div class="banner-content">
             <h1>Advancing Clean Energy for All</h1>
             <p>Bhavani Electricals & Mitali Enterprises designs and installs premium, sustainable solar architectures for residential properties and heavy industries throughout Nashik.</p>
-            <a href="https://wa.me" class="know-more-btn" target="_blank">Know More</a>
+            <a href="#order" class="know-more-btn">Book Consultation</a>
         </div>
     </div>
 
@@ -269,6 +338,7 @@
         <!-- Technical System Components Block -->
         <section id="system" class="corporate-section">
             <h2>Solar Architecture Profile</h2>
+            <p class="section-desc">Our turnkey engineering setups incorporate international-grade components built for multi-decade durability.</p>
             <div class="system-grid">
                 <div class="system-card">
                     <h3>Solar Panels</h3>
@@ -283,41 +353,3 @@
                     <p>Holds the panels at the right structural angle on your roof layout.</p>
                 </div>
                 <div class="system-card">
-                    <h3>Net Meter</h3>
-                    <p>Tracks power sent to and taken from the utility grid system.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Main Benefits Block -->
-        <section id="benefits" class="corporate-section">
-            <h2>Main Benefits</h2>
-            <div class="benefits-row">
-                <div class="benefit-item">
-                    <h3>Lower Bills</h3>
-                    <p>Generates free energy from the sun to offset daily utility operational costs.</p>
-                </div>
-                <div class="benefit-item">
-                    <h3>Eco-Friendly</h3>
-                    <p>Produces clean, green energy without generating harmful air pollution metrics.</p>
-                </div>
-                <div class="benefit-item">
-                    <h3>Roof Protection</h3>
-                    <p>Shades your physical roof structure from direct sun, which can help keep your top floor spaces cooler.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Completed Work Image Gallery Block -->
-        <section id="portfolio" class="corporate-section">
-            <h2>Our Completed Rooftop Projects</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="project1.jpg" alt="Rooftop Setup View 1">
-                    <div class="portfolio-label">Project View 1</div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="project2.jpg" alt="Rooftop Setup View 2">
-                    <div class="portfolio-label">Project View 2</div>
-                </div>
-                <div class="portfolio-item">
