@@ -27,13 +27,12 @@
             color: var(--text-main);
             line-height: 1.6;
             overflow-x: hidden;
-            /* Animated subtle ambient glow background */
             background-image: 
                 radial-gradient(at 0% 0%, rgba(0, 242, 254, 0.05) 0px, transparent 50%),
                 radial-gradient(at 100% 100%, rgba(79, 172, 254, 0.05) 0px, transparent 50%);
         }
 
-        /* Top Modern Futuristic Header */
+        /* Top Header */
         header {
             text-align: center;
             padding: 4rem 1rem;
@@ -60,7 +59,7 @@
             font-weight: 600;
         }
 
-        /* Sticky Clean Navigation Links */
+        /* Navigation Bar */
         nav {
             background-color: rgba(18, 24, 41, 0.85);
             backdrop-filter: blur(10px);
@@ -76,10 +75,9 @@
         nav a {
             color: var(--text-main);
             text-decoration: none;
-            margin: 0 1.5rem;
+            margin: 0 1.2rem;
             font-weight: 600;
             font-size: 0.95rem;
-            letter-spacing: 0.5px;
             transition: color 0.3s ease;
         }
 
@@ -87,14 +85,14 @@
             color: var(--neon-cyan);
         }
 
-        /* Centered Premium Layout Wrapper */
+        /* Main Content Wrapper */
         main {
             max-width: 800px;
             margin: 3rem auto;
             padding: 0 1.5rem;
         }
 
-        /* Futuristic Glass Cards */
+        /* Glass Cards */
         section {
             background-color: var(--card-dark);
             padding: 2.5rem;
@@ -113,12 +111,11 @@
         section h2 {
             font-size: 1.6rem;
             color: var(--text-main);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             position: relative;
             padding-bottom: 0.5rem;
         }
 
-        /* Clean Neon Accent Indicator Lines */
         section h2::after {
             content: '';
             position: absolute;
@@ -134,9 +131,10 @@
             color: var(--text-muted);
             font-size: 1.05rem;
             line-height: 1.7;
+            margin-bottom: 1.5rem;
         }
 
-        /* Elegant Minimal Solutions List */
+        /* Bullet lists */
         ul {
             list-style: none;
         }
@@ -144,7 +142,7 @@
         li {
             color: var(--text-muted);
             font-size: 1.05rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             display: flex;
             align-items: center;
         }
@@ -154,10 +152,9 @@
             color: var(--neon-cyan);
             font-weight: bold;
             margin-right: 12px;
-            font-size: 1.2rem;
         }
 
-        /* Action Dynamic Layout Wrapper */
+        /* Action Buttons Layout */
         .cta-buttons {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -165,7 +162,6 @@
             margin-top: 2rem;
         }
 
-        /* Futuristic Action Buttons */
         .call-btn, .whatsapp-btn {
             display: flex;
             align-items: center;
@@ -176,7 +172,6 @@
             border-radius: 12px;
             transition: all 0.3s ease;
             font-size: 1rem;
-            letter-spacing: 0.5px;
         }
 
         .call-btn {
@@ -187,7 +182,6 @@
 
         .call-btn:hover {
             background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .whatsapp-btn {
@@ -201,7 +195,6 @@
             transform: translateY(-2px);
         }
 
-        /* Minimal Centered Footer */
         footer {
             text-align: center;
             padding: 4rem 1rem;
@@ -210,7 +203,6 @@
             border-top: 1px solid rgba(255, 255, 255, 0.03);
         }
 
-        /* Mobile Optimization Rules */
         @media (max-width: 600px) {
             header h1 { font-size: 2rem; }
             .cta-buttons { grid-template-columns: 1fr; }
@@ -220,41 +212,55 @@
 </head>
 <body>
 
-    <!-- Top Sticky Bar -->
+    <!-- Navigation Menu -->
     <nav>
-        <a href="#about">Company</a>
-        <a href="#services">Solutions</a>
+        <a href="#about">About</a>
+        <a href="#residential">Residential</a>
+        <a href="#industrial">Industrial</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Main Title Content Banner -->
+    <!-- Header Block -->
     <header>
         <h1>Bhavani Electricals</h1>
         <p class="tagline">Mitali Enterprises</p>
     </header>
 
     <main>
-        <!-- Vision Block Section -->
+        <!-- About Overview Section -->
         <section id="about">
             <h2>Next-Gen Energy Solutions</h2>
-            <p>We engineer high-efficiency rooftop solar architectures across Nashik. Our technical teams deliver residential deployments, large-scale industrial projects, net metering integrations, and streamlined structural operations built for maximum durability.</p>
+            <p>We deliver specialized electrical architecture and premium rooftop solar grids across Nashik. From family homes trying to eliminate light bills to large factories powering critical infrastructure, we handle your projects with clean engineering precision.</p>
         </section>
 
-        <!-- Services Section Grid Layout -->
-        <section id="services">
-            <h2>Industrial Scope</h2>
+        <!-- 1) RESIDENTIAL SOLAR SECTION -->
+        <section id="residential">
+            <h2>1. Residential Solar Systems</h2>
+            <p>Cut your monthly home electricity bills down to zero. We design clean, safe, and highly durable home solar installations tailored to your roof space.</p>
             <ul>
-                <li>Smart Rooftop Solar Arrays (Residential & Commercial)</li>
-                <li>Net Metering Sync & Subsidy Clearance Support</li>
-                <li>High-Voltage Turnkey Electrical Infrastructure</li>
-                <li>Predictive Solar Array Lifecycle Maintenance</li>
+                <li>On-Grid & Off-Grid Home Solar Plant Setup</li>
+                <li>Full Support for Government Subsidies & Apply Processing</li>
+                <li>High-Efficiency Modules with 25 Years Warranty</li>
+                <li>Net Metering System with MSEDCL approval</li>
             </ul>
         </section>
 
-        <!-- Digital Communication Actions Block -->
+        <!-- 2) INDUSTRIAL SOLUTIONS SECTION -->
+        <section id="industrial">
+            <h2>2. Industrial & Commercial Solutions</h2>
+            <p>Power your business with optimized energy models. We build rugged, heavy-duty electrical setups and industrial-scale solar grids that minimize operational costs.</p>
+            <ul>
+                <li>Large-Scale Commercial Rooftop Solar Plants</li>
+                <li>Turnkey Industrial Electrical Projects & Wiring</li>
+                <li>HT/LT Panel Installation & Transformer Support</li>
+                <li>Power Factor Correction & Energy Management Systems</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
         <section id="contact">
-            <h2>Launch Your Engineering Consult</h2>
-            <p>Connect immediately with our primary engineering supervisor to schedule site evaluations, load analysis metrics, or customized project layout quotes.</p>
+            <h2>Launch Your Project Consult</h2>
+            <p>Connect with our primary project head to schedule your technical site evaluation or to request custom structural quotes.</p>
             <div class="cta-buttons">
                 <a href="tel:+919075160204" class="call-btn">⚡ Direct Call</a>
                 <a href="https://wa.me" class="whatsapp-btn" target="_blank">🚀 WhatsApp Interface</a>
