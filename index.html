@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhavani Electricals & Mitali Enterprises | Solar Works in Nashik</title>
+    <title>Expert Electrical & Solar Services | Professional Installer</title>
     <style>
         :root {
-            --primary-dark: #0b1528;
-            --accent-orange: #f2994a;
-            --accent-green: #27ae60;
-            --light-bg: #f4f7f6;
+            --primary-color: #0f172a;
+            --secondary-color: #eab308;
+            --text-color: #334155;
+            --light-bg: #f8fafc;
             --white: #ffffff;
         }
 
@@ -17,346 +17,267 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            color: #333;
+            color: var(--text-color);
             line-height: 1.6;
             background-color: var(--white);
         }
 
-        /* Top Notification Bar */
-        .top-banner {
-            background-color: var(--primary-dark);
+        /* Top Bar & Navigation */
+        .top-bar {
+            background-color: var(--primary-color);
             color: var(--white);
             text-align: center;
-            padding: 12px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-bottom: 3px solid var(--accent-orange);
+            padding: 10px;
+            font-size: 0.9rem;
+            font-weight: bold;
         }
 
-        /* Navigation Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 6%;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            padding: 20px 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             background: var(--white);
             z-index: 1000;
         }
 
-        .brand-logo {
-            display: flex;
-            flex-direction: column;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
         }
 
-        .brand-main {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--primary-dark);
-            letter-spacing: -0.5px;
-            line-height: 1.2;
+        .logo span {
+            color: var(--secondary-color);
         }
 
-        .brand-sub {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--accent-green);
-            margin-top: 2px;
-        }
-
-        .header-cta {
-            background-color: var(--accent-orange);
-            color: var(--white);
-            padding: 12px 24px;
+        .cta-btn {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 30px;
-            box-shadow: 0 4px 6px rgba(242, 153, 74, 0.3);
-            transition: 0.3s ease;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
-        .header-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(242, 153, 74, 0.4);
-        }
-
-        /* Hero Banner Section */
-        .hero {
-            background: linear-gradient(rgba(11, 21, 40, 0.65), rgba(11, 21, 40, 0.65)), url('image.jpg') no-repeat center center/cover;
+        .cta-btn:hover {
+            background-color: var(--primary-color);
             color: var(--white);
-            padding: 120px 6% 100px 6%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
+            color: var(--white);
+            padding: 100px 5%;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .hero h1 span {
-            color: var(--accent-orange);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 35px;
-            color: #e2e8f0;
-            max-width: 700px;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
         }
 
-        /* Features Bar */
-        .features-bar {
-            background-color: #152238;
-            padding: 25px 6%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            text-align: center;
-            border-bottom: 4px solid var(--accent-green);
-        }
-
-        .feature-item {
-            color: var(--white);
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .feature-item span {
-            display: block;
-            color: var(--accent-orange);
-            font-size: 1.4rem;
-            margin-bottom: 5px;
-        }
-
-        /* Services Grid Section */
+        /* Services Section */
         .services {
-            padding: 90px 6%;
+            padding: 80px 5%;
             background-color: var(--light-bg);
             text-align: center;
         }
 
         .services h2 {
-            font-size: 2.3rem;
-            margin-bottom: 10px;
-            color: var(--primary-dark);
-            font-weight: 800;
-        }
-
-        .services .sub-title {
-            color: #666;
-            margin-bottom: 50px;
-            font-size: 1.1rem;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 35px;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
 
         .card {
             background: var(--white);
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.04);
-            transition: 0.3s ease;
-            border-top: 5px solid var(--primary-dark);
-        }
-
-        .card.res { border-top-color: var(--accent-green); }
-        .card.com { border-top-color: var(--accent-orange); }
-        .card.ind { border-top-color: var(--primary-dark); }
-
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--secondary-color);
         }
 
         .card h3 {
             margin-bottom: 15px;
-            color: var(--primary-dark);
-            font-size: 1.4rem;
-            font-weight: 700;
+            color: var(--primary-color);
         }
 
-        /* Work Gallery Section */
-        .gallery-section {
-            padding: 90px 6%;
-            background-color: var(--white);
+        /* About Section */
+        .about {
+            padding: 80px 5%;
+            max-width: 800px;
+            margin: 0 auto;
             text-align: center;
         }
 
-        .gallery-section h2 {
-            font-size: 2.3rem;
-            color: var(--primary-dark);
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 40px auto 0 auto;
-        }
-
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.06);
-            border: 3px solid var(--light-bg);
-            background: var(--light-bg);
-            transition: 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.02);
-            border-color: var(--accent-green);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .gallery-caption {
-            padding: 15px;
-            font-weight: 600;
-            font-size: 1rem;
-            color: var(--primary-dark);
-            background: var(--white);
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
         }
 
         /* Contact Section */
         .contact {
-            padding: 90px 6%;
-            background-color: var(--primary-dark);
+            padding: 80px 5%;
+            background-color: var(--primary-color);
             color: var(--white);
             text-align: center;
         }
 
         .contact h2 {
-            font-size: 2.3rem;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-
-        .contact p {
-            color: #cbd5e1;
-            margin-bottom: 40px;
-            font-size: 1.1rem;
-        }
-
-        .profile-box {
-            background: rgba(255, 255, 255, 0.05);
-            max-width: 450px;
-            margin: 0 auto 40px auto;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .profile-name {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--accent-orange);
-            margin-bottom: 5px;
-        }
-
-        .profile-title {
-            font-size: 1rem;
-            color: #94a3b8;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-size: 2rem;
             margin-bottom: 20px;
         }
 
-        .phone-link {
-            display: inline-block;
-            font-size: 1.8rem;
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 800;
-            margin-bottom: 15px;
-            transition: 0.2s;
+        .contact-info {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
         }
 
-        .phone-link:hover {
-            color: var(--accent-orange);
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        .maps-btn {
-            display: block;
-            background-color: #4285F4;
-            color: var(--white);
-            padding: 12px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            margin-bottom: 15px;
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        form button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 1rem;
             transition: 0.3s;
         }
 
-        .whatsapp-btn {
-            display: block;
-            background-color: #25d366;
-            color: var(--white);
-            padding: 12px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.05rem;
-            transition: 0.3s;
+        form button:hover {
+            background-color: var(--white);
         }
 
         footer {
-            background-color: #060b14;
-            color: #64748b;
+            background-color: #0b111e;
+            color: #94a3b8;
             text-align: center;
-            padding: 30px 6%;
-            font-size: 0.95rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            font-size: 0.9rem;
         }
 
+        /* Responsive Design */
         @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; gap: 15px; }
             .hero h1 { font-size: 2rem; }
-            .phone-link { font-size: 1.5rem; }
+            header { flex-direction: column; gap: 15px; text-align: center; }
         }
     </style>
 </head>
 <body>
 
-    <div class="top-banner">
-        📍 Proudly Serving Nashik & Surrounding Areas
+    <!-- Top Alert Bar -->
+    <div class="top-bar">
+        📍 Serving Nashik & Surrounding Regions | Available for Bookings
     </div>
 
+    <!-- Header Navigation -->
     <header>
-        <div class="brand-logo">
-            <span class="brand-main">BHAVANI ELECTRICALS</span>
-            <span class="brand-sub">& MITALI ENTERPRISES</span>
-        </div>
-        <a href="tel:+919075160204" class="header-cta">📞 Call: 9075160204</a>
+        <div class="logo">Volt<span>Solar</span></div>
+        <a href="#contact" class="cta-btn">Call Now: +91 98765 43210</a>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>All Types Of <span>Solar Works</span> in Nashik</h1>
-        <p>Clean Energy, Better Tomorrow. Switch to reliable solar solutions to reduce power expenses and secure your energy future.</p>
-        <a href="https://wa.me." class="whatsapp-btn" style="display:inline-block; max-width:250px; margin:0 auto;" target="_blank">Get A Free Quote</a>
+        <h1>Reliable Electrical Repairs & Smart Solar Installations</h1>
+        <p>Your certified, local expert for safe home wiring, emergency fault repairs, and money-saving rooftop solar panels.</p>
+        <a href="#contact" class="cta-btn">Get A Free Quote</a>
     </section>
 
-    <div class="features-bar">
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Core Services</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>⚡ Residential Electrical</h3>
+                <p>Complete home wiring, inverter setups, circuit breaker upgrades, and appliance installation. Safe, clean, and up to code.</p>
+            </div>
+            <div class="card">
+                <h3>☀️ Solar Panel Setup</h3>
+                <p>On-grid and off-grid rooftop solar installations designed to drastically reduce your monthly electricity bills.</p>
+            </div>
+            <div class="card">
+                <h3>🔧 Fault Finding & Repair</h3>
+                <p>Quick troubleshooting for short circuits, power trips, and faulty wiring to keep your family and property safe.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>Why Choose Me?</h2>
+        <p>With years of hands-on experience as a professional electrician and solar installer, I bring precision and safety to every single job. I am committed to delivering clean craftwork, upfront pricing, and energy-efficient solutions that help you save money on utilities.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Let's Get Your Project Started</h2>
+        <p style="margin-bottom: 20px;">Fill out the form below or reach out directly for immediate booking.</p>
+        <div class="contact-info">
+            📞 Phone: <a href="tel:+919876543210">+91 98765 43210</a><br>
+            📧 Email: <a href="mailto:yourname@example.com">contact@yourdomain.com</a>
+        </div>
+
+        <!-- Form works natively with external form handlers -->
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Your Phone Number" required>
+            <input type="text" name="location" placeholder="Your Area / Neighborhood" required>
+            <textarea name="message" rows="4" placeholder="Briefly describe what you need help with..." required></textarea>
+            <button type="submit">Submit Request</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 VoltSolar. All Rights Reserved. Safe & Reliable Electrical Services.</p>
+    </footer>
+
+</body>
+</html>
